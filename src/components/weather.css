@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background: rgb(41, 136, 185);
+  background: radial-gradient(
+    circle,
+    rgba(41, 136, 185, 1) 0%,
+    rgba(70, 142, 255, 1) 48%,
+    rgba(27, 63, 223, 1) 100%
+  );
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather {
+  width: clamp(320px, 50vw, 1000px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+  font-size: 3rem;
+}
+
+form label {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#city {
+  max-width: 200px;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  outline: none;
+}
+
+#city[type='text'] {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+#city::placeholder {
+  background-color: none;
+  outline: none;
+  color: #fff;
+}
+
+#city:focus {
+  background-color: none;
+  outline: none;
+  color: #fff;
+}
+
+.getweather {
+  background-color: #2754e7;
+  border: 3px solid #2754e7;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.getweather:hover {
+  background-color: transparent;
+  border: 2px solid #2754e7;
+  animation: goUp 0.3s linear;
+}
+
+@keyframes goUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
