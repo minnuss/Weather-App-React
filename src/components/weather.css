@@ -20,6 +20,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 15px;
 }
 
 .weather {
@@ -110,5 +112,11 @@ form label {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 830px) {
+  .getweather {
+    margin-left: 0;
   }
 }
